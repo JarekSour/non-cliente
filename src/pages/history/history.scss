@@ -1,0 +1,30 @@
+page-history {
+    .card-header-cancel{
+        padding: 9px;
+        background: #f54545;
+        margin-top: -13px;
+        margin-left: -16px;
+        margin-right: -16px;
+        color: white;
+      }
+
+      .card-header-acepta{
+        padding: 9px;
+        background: #0ea70e;
+        margin-top: -13px;
+        margin-left: -16px;
+        margin-right: -16px;
+        color: white;
+      }
+
+      .date{
+        color: #adadad;
+        text-align: right;
+        margin-bottom: -8px;
+      }
+
+      .street{
+        font-size: 16px;
+        margin-top: 7px;
+      }
+}

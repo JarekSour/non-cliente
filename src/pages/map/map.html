@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="my-gray">
+        <ion-title>Mapa</ion-title>
+        <ion-buttons end>
+            <button (click)="cancelarPedido()" ion-button clear>
+                Cancelar pedido
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="floating-panel" *ngIf="errorGPS">
+        <p>Debes activar el GPS</p>
+    </div>
+    <div class="floating-panel" *ngIf="errorPermiso">
+        <p>Debes activar los permisos de GPS</p>
+    </div>
+    <div class="floating-gray" *ngIf="errorPermiso || errorGPS"></div>
+    <div #map id="map" style="height:99%;">
+    </div>
+    <div style="text-align: center">
+        <img class="img-circular" style="bottom:0px;margin-left: -65px" src="http://nsbox.mybluemix.net/get?f={{photo}}" alt="">
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="my-purple">
+        <div style="text-align: center;">
+            <p style="color: white;font-size: 15px;">El agente {{name}}<br>va en camino</p>
+        </div>
+    </ion-toolbar>
+</ion-footer>

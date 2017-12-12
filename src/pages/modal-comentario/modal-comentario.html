@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color="my-gray">
+        <ion-title>Comentario</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">Atrás</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <h2>Escribemos tu comentario acerca de la transacción</h2>
+            <p style="color:gray">{{lleva}} caracteres de 140</p>
+            <ion-item>
+                <ion-textarea rows="20" placeholder="Comentario..." [(ngModel)]="txtComentario" (keyup)="caracteresLleva()"></ion-textarea>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar class="footer-btn">
+        <button ion-button block (click)="save()" color="my-purple">Guardar</button>
+    </ion-toolbar>
+</ion-footer>

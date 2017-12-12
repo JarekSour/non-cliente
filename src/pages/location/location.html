@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color="my-gray">
+        <ion-title>Dirección</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p style="margin-left: 15px;">Escribe la dirección de despacho</p>
+    <ion-searchbar [(ngModel)]="autocomplete.query" [showCancelButton]="true" (ionInput)="updateSearch()" placeholder="Escribe tu dirección de entrega">
+    </ion-searchbar>
+    <ion-list>
+        <ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">
+            {{ item.description }}
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="my-purple">
+        <button ion-button outline block (click)="aceptarLocation()" color="light">
+            Aceptar dirección
+        </button>
+    </ion-toolbar>
+</ion-footer>

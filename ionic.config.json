@@ -1,5 +1,8 @@
 {
-  "name": "NON-STOP",
-  "app_id": "",
-  "type": "ionic-angular"
+  "name": "NON-STOP_Member",
+  "app_id": "f714f540-6750-4d60-bff6-4af7ed15150d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

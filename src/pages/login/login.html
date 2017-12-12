@@ -1,0 +1,38 @@
+<ion-content padding style="background: #353535">
+    <form (submit)="doLogin()">
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-10 offset-1>
+                    <img src="assets/img/title.png" alt="" style="margin-top: 50px;">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-item style="background: #353535;margin-top: 20px;">
+            <ion-label floating color="light">Correo electrónico</ion-label>
+            <ion-input [(ngModel)]="loginData.e" name="username" type="email" style="color:white;"></ion-input>
+        </ion-item>
+        <ion-item style="background: #353535;margin-top: 10px;">
+            <ion-label floating color="light">Contraseña</ion-label>
+            <ion-input [(ngModel)]="loginData.p" name="password" type="password" style="color:white"></ion-input>
+        </ion-item>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-10 offset-1>
+                    <button ion-button block type="submit" color="my-purple" style="margin-top: 40px;height: 33px;">Ingresar</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-10 offset-1>
+                <button ion-button block (click)="register()" color="light" outline> no tienes cuenta? Registrate aquí</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

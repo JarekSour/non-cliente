@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar color="my-gray">
+        <ion-title>Completar pedido</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngFor="let item of json">
+        <ion-item>
+            <p style="font-size: 18px;color:grey ">{{item.brand}}</p>
+            <p>{{item.name}} </p>
+            <p style="font-size: 14px;text-align: right;margin-top: -20px">#{{item.count}} unid.</p>
+            <p style="font-size: 14px;text-align: right;">${{item.prize}}</p>
+        </ion-item>
+        <ion-item>
+            <p style="text-align: right;font-size: 20px">{{item.suma}}</p>
+        </ion-item>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="my-purple">
+        <h5 style="color: white;text-align: center;">TOTAL : $ {{total}}</h5>
+        <ion-buttons end>
+            <button ion-button outline (click)="completePedido()">
+                Completar pedido
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,29 @@
+page-profile {
+    .img-circular{ 
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px gray;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 130px;
+        height: 130px;
+    }
+
+    .btn-round{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-top: -50px;
+        margin-left: 75px;
+    }
+
+    .txt{
+        color: #353535;
+        font-size: 16px;
+    }
+
+    .nom{
+        font-size: 11px;
+    }
+}

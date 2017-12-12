@@ -1,17 +1,42 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-menu [content]="content" id="menuSlide">
+    <ion-content class="back-sidemenu">
+        <div class="box-list">
+            <ion-row style="background: #353535;height: 220px;">
+                <ion-col col-1></ion-col>
+                <ion-col col-10 class="ion-img-box">
+                    <img src="assets/img/title.png" alt="" style="margin-top: 15px;">
+                </ion-col>
+                <ion-col col-12 style="margin-top: 85px;">
+                    <p style="color:white;margin-left: 15px;font-size: 16px;margin-bottom: 15px;">{{_name}} {{_lastname}}</p>
+                </ion-col>
+            </ion-row>
+        </div>
+        <ion-list>
+            <button menuClose ion-item icon-left (click)="goToPage('home')" class="btn-trans btn-menu" style="font-size: 14px;padding-left: 30px;">
+                Inicio
+            </button>
+            <button menuClose ion-item icon-left (click)="goToPage('history')" class="btn-trans btn-menu" style="font-size: 14px;padding-left: 30px;">
+                Historial
+            </button>
+            <button menuClose ion-item icon-left (click)="goToPage('profile')" class="btn-trans btn-menu" style="font-size: 14px;padding-left: 30px;">
+                Configuración
+            </button>
+        </ion-list>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
+        <ion-footer no-shadow>
+            <ion-list style="margin-bottom: 0px;">
+                <button menuClose ion-item icon-left (click)="closeSession()" class="btn-trans btn-menu" style="font-size: 12px;padding-left: 30px;">
+              Cerrar sesión
+                  </button>
+                <button menuClose ion-item icon-left (click)="goToPage('terminos')" class="btn-trans btn-menu" style="font-size: 12px;padding-left: 30px;">
+              Términos y condiciones
+                  </button>
+                <button menuClose ion-item icon-left style="font-size: 10px;background: #353535;color: white;">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NONSTOP - v 1.0.3
+              </button>
+            </ion-list>
+        </ion-footer>
+    </ion-content>
 
 </ion-menu>
 

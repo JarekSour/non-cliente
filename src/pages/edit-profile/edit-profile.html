@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="my-gray">
+        <ion-title>Editar Perfil</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (submit)="editProfile()" #registerForm="ngForm">
+        <ion-item style="margin-top: 40px;">
+            <ion-label stacked>{{inputText}}</ion-label>
+            <ion-input type="text" [(ngModel)]="product.x" required name="input" *ngIf="isNameorLast"></ion-input>
+            <ion-input type="email" [(ngModel)]="product.x" required name="input" *ngIf="isCorreo"></ion-input>
+            <ion-input type="number" [(ngModel)]="product.x" required name="input" *ngIf="isTelefono"></ion-input>
+            <ion-input type="password" [(ngModel)]="product.x" required name="input" *ngIf="isPass"></ion-input>
+        </ion-item>
+        <ion-item style="margin-top: 10px;" *ngIf="isPass">
+            <ion-label stacked>{{inputText2}}</ion-label>
+            <ion-input type="password" [(ngModel)]="product.xx" required name="input2"></ion-input>
+        </ion-item>
+        <ion-item style="margin-top: 10px;" *ngIf="isPass">
+            <ion-label stacked>{{inputText3}}</ion-label>
+            <ion-input type="password" [(ngModel)]="product.xxx" required name="input3"></ion-input>
+        </ion-item>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-8 offset-2>
+                    <button ion-button block type="submit" color="my-purple" [disabled]="!registerForm.form.valid" style="margin-top: 40px;">Guardar</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar color="my-gray">
+        <ion-title>Historial</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngFor="let item of json">
+        <ion-card>
+            <ion-card-content>
+                <ion-card-header class="{{item.Class}}">
+                    {{item.Resolution}}
+                    <button *ngIf="item.Order" (click)="openComentario(item.Order)" ion-button clear color="light" style="margin-top: -7px;margin-bottom: -42px;font-size: 28px;float: right;margin-right: -30px;">
+                        <ion-icon name="text"></ion-icon>
+                    </button>
+                </ion-card-header>
+                <p class="street">{{item.Address}}</p>
+                <ion-item>
+                    <p>{{item.Agent}}</p>
+                    <p style="font-size: 20px;">{{item.Nombre}}</p>
+                </ion-item>
+                <p>Monto : <span style="font-size: 17px;">${{item.Total}}</span></p>
+                <p class="date">{{item.Register}}</p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>
